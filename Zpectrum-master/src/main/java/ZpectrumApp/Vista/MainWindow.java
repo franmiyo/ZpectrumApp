@@ -626,6 +626,9 @@ public class MainWindow extends JFrame implements TableModel {
 		String[] columsName = new String[] { "Name", "Price" };
 		DefaultTableModel modelo = new DefaultTableModel(1, columsName.length);
 		modelo.setColumnIdentifiers(columsName);
+		if (tokens.size() == 0) {
+			return null;
+		}
 
 		for (TokensMaiar tokenMaiar : tokens) {
 
@@ -690,7 +693,13 @@ public class MainWindow extends JFrame implements TableModel {
 		mainPanel = new JPanel(new MigLayout("fill", "[][grow]", "[grow][]"));
 
 		mainWindowContainer.add(mainPanel);
-		mainPanel.add(new JScrollPane(tokensMaiar()), "cell 1 0, alignx center");
+		if (tokensMaiar() == null) {
+			mainPanel.add(new JLabel("Maiar Exchange api call under maintenance, sorry for the inconvenience"),
+					"cell 1 0, alignx center");
+		} else {
+			mainPanel.add(new JScrollPane(tokensMaiar()), "cell 1 0, alignx center");
+		}
+
 		mainPanel.add(loginButton, "cell 1 1, alignx center");
 
 	}
