@@ -1,6 +1,6 @@
 # ZpectrumApp
 
-Welcome to ZpectrumApp, this app make managing your cryptos much easier in MultiverseX blockchain, if you want to know how to use the app read the Group02_Record_Zpectrum.pdf, on this file there is all the info you need.
+Welcome to ZpectrumApp, this app make managing your cryptos much easier in MultiverseX blockchain, if you want to know how to use the app read the [Group02_Record_Zpectrum.pdf](https://github.com/franmiyo/ZpectrumApp/blob/master/Group02_Record_Zpectrum.pdf), on this file there is all the info you need.
 
 In order to run the app you can do it in development mode in a IDE or run a comand prompt Maven order (mvn clean install) and deploy a .jar file.
 
